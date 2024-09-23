@@ -1,0 +1,45 @@
+<p>third works!</p>
+<div *ngIf="con; then ifBlock; else elseBlock"></div>
+
+<ng-template #ifBlock> This is if block </ng-template>
+<ng-template #elseBlock> This is else block </ng-template>
+<br /><br />
+<hr />
+<br /><br />
+
+<!-- check weather the number is odd or even using ngIf -->
+<input type="number" [(ngModel)]="num" />
+
+<div *ngIf="num % 2 == 0; then isEven; else isOdd"></div>
+<ng-template #isOdd> This is an Odd number </ng-template>
+<ng-template #isEven> This is an Even number </ng-template>
+<br /><br />
+<hr />
+<br /><br />
+<!-- Show list of employees using ngFor -->
+<h1>Employee Details</h1>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Department</th>
+      <th scope="col">Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of arrObj">
+      <ng-container *ngIf="x.salary > 1500">
+        <th scope="row">{{ x.id }}</th>
+        <td>{{ x.name }}</td>
+        <td>{{ x.position }}</td>
+        <td>{{ x.department }}</td>
+        <td>{{ x.salary }}</td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
+<br /><br />
+<hr />
+<br /><br />

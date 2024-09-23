@@ -14,14 +14,36 @@ Hello {{mydata}} -->
 <!-- <h1 [style.color]="mycolor">Masstech</h1><br> -->
 
 <!-- using ngModel -->
-<input type="color" [(ngModel)]="mycolor">
+<input type="color" [(ngModel)]="mycolor" />
 
-<h1 [style.color]="mycolor">Masstech</h1><br>
-<input type="text" [(ngModel)]="myvalue">{{myvalue}}
-<br><br>
+<h1 [style.color]="mycolor">Masstech</h1>
+<br />
+<input type="text" [(ngModel)]="myvalue" />{{ myvalue }} <br /><br />
 
 <!-- add values -->
-First<input type="number" #a><br><br>
-Second<input type="number" #b>
-<input type="button" value="Click" (click)="func2(a.value,b.value)">
-{{add}}
+First<input type="number" #a /><br /><br />
+Second<input type="number" #b />
+<input type="button" value="Click" (click)="func2(a.value, b.value)" />
+{{ add }}
+<br /><br />
+<!-- add values using ngModel -->
+First<input type="number" [(ngModel)]="num1" /><br /><br />
+Second<input type="number" [(ngModel)]="num2" />
+<input type="button" value="Click" (click)="addnum()" />
+{{ sum }}
+
+<br /><br />
+<hr />
+<br /><br />
+<!-- add functionality without button -->
+<input type="number" [(ngModel)]="fno" /><br />
+<input type="number" [(ngModel)]="sno" />
+<br />
+<select [(ngModel)]="ope" (change)="calculator()">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+
+{{ res }}
