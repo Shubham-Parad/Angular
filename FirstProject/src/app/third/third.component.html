@@ -43,3 +43,32 @@
 <br /><br />
 <hr />
 <br /><br />
+
+<!-- Creating toggle button -->
+<input type="submit" value="Click" (click)="con = !con" />
+<div *ngIf="con; then fblock; else sblock"></div>
+<ng-template #fblock> Good morning </ng-template>
+<ng-template #sblock> Good afternoon </ng-template>
+<br /><br />
+<hr />
+<br /><br />
+<!-- Calculator using switch case -->
+
+<!-- 1st number <input type="number" [(ngModel)]="fno" /> <br /><br />
+2nd number <input type="number" [(ngModel)]="sno" /> Choice
+<select [ngSwitch]="choice">
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+<br />
+Result: {{ res }}
+
+<div [ngSwitch]="choice">
+  <div *ngSwitchCase="+">{{ fno + sno }}</div>
+  <div *ngSwitchCase="-">{{ fno - sno }}</div>
+  <div *ngSwitchCase="*">{{ fno * sno }}</div>
+  <div *ngSwitchCase="/">{{ fno / sno }}</div>
+  <div *ngSwitchDefault=""></div>
+</div> -->

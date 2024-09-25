@@ -1,6 +1,8 @@
-<h1>This is {{title}}</h1>
+<h1>This is {{ title }}</h1>
 
 <!-- <app-first></app-first> -->
- <!-- <app-second></app-second> -->
-  <app-third></app-third>
+<!-- <app-second></app-second> -->
+<!-- <app-third></app-third> -->
+<app-child [idata]="name" (odata)="getData = $event"></app-child>
+{{getData}}
 <router-outlet />
