@@ -3,6 +3,11 @@
 <!-- <app-first></app-first> -->
 <!-- <app-second></app-second> -->
 <!-- <app-third></app-third> -->
-<app-child [idata]="name" (odata)="getData = $event"></app-child>
-{{getData}}
+<!-- <app-child [idata]="name" (odata)="getData = $event"></app-child>
+{{getData}} -->
+<app-gettersetter [mydata]="checkfn"></app-gettersetter>
+<input type="submit" value="Login" (click)="checkfn=true">
+<input type="submit" value="Logout" (click)="checkfn=false">
+
 <router-outlet />
+
